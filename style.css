@@ -267,8 +267,117 @@ footer a{
     align-items: center;
     left: 10%;
     margin-top: 40px;
+
 }
 
+.food-data-body{
+    background-color: black;
+    background-image: none;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+.food-data-body header{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    text-align: center;   
+    top:5%; 
+}
+.food-data-body main{
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%; 
+
+}
+.food-data-body .food-divs{
+    /* position: absolute; */
+    background-color: #ffe6b3;  /* soft creamy orange */
+    box-shadow: 0 4px 12px rgba(255, 174, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+    width: 20%;
+    min-height: fit-content;
+    max-height: 300px;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: black;
+    margin-bottom:3% ;
+}
+.food-data-body .food-divs:hover{
+    background-color: #ffc822;
+    
+}
+
+.food-data-body .food-divs *{
+ color: #333; 
+}
+.food-divs:hover {
+  transform: translateY(-5px);
+  background-color: #222;
+  box-shadow: 0 8px 20px rgba(255, 200, 34, 0.5);
+}
+
+
+
+.food-data-body button{
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
+    font-size: small;
+    font-weight: bold;
+}
+.food-data-body button:hover{
+    cursor: pointer;
+
+}
+.food-data-body .delete-btn{
+    background-color: rgb(252, 96, 96);
+}
+.food-data-body .update-btn{
+    background-color: rgb(21, 246, 21);
+}
+.food-data-body .delete-btn:hover{
+    background-color: rgb(250, 66, 66);
+}
+.food-data-body .update-btn:hover{
+    background-color: rgb(0, 232, 0);
+}
+
+.body-blurr{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);  /* blurs everything behind */
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 9999; /* sits above everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+}
+.coming-soon-text {
+  color: #ffc822;
+  font-size: 3rem;
+  font-family: 'Lilita One', cursive;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000;
+}
+.coming-soon-text a{
+  font-size: 2rem;
+  text-decoration: none;
+  color: #ffffff;
+}
 
 @media(max-width:1024px){
     .about-page-main{
@@ -329,6 +438,16 @@ footer a{
 }
 .team{
     top:95%;
+}
+}
+@media(max-width: 767px){
+    .food-data-body main{
+    flex-direction: column;
+    align-items: center;
+    }
+
+  .food-data-body .food-divs{
+    width: 80%;
 }
 }
 
@@ -408,7 +527,13 @@ footer a{
 .login-body .header p{
     font-size:small;
 }
-
+.food-data-body header{
+    font-size: small;
+    top:10%;
+}
+.food-data-body main{
+    gap:20px;
+}
 }
 @media(max-width:336px){
     .main{
