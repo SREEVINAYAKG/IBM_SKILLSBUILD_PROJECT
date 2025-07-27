@@ -58,6 +58,7 @@ h1{
     align-items: left;
     gap: 30px;
 }
+
 .btn{
     padding: 10px;
     text-align: center;
@@ -85,7 +86,225 @@ footer a{
     color: #ffffff;
     text-decoration: none;
 }
+.about-page{
+    background-color: black;
+    color: white;
+    background-image: none;
 
+}
+.about-page-header{
+    position: absolute;
+    width: 100%;
+    text-align: center;   
+    top:5%; 
+}
+.about-page-main{
+    position: absolute;
+    top: 20%;
+    /* left: 10%; */
+    display: flex;
+    flex-direction: row;
+    gap:10%;
+    text-align: center;
+    justify-content: center;
+}
+.people{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    display: flex;
+    flex-direction: row;
+    gap:10%;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+}
+.team{
+    position: absolute;
+    top:60%;
+    width: 100%;;
+    text-align: center;
+}
+.about-page-content{
+    top: 50%;
+    left: 10%;
+    width: 20%;
+    border: 1px solid #ffc822;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+.about-page-content:hover{
+    cursor:pointer;
+    background-color: #ffc822;
+    /* color: black; */
+}
+.about-page-content:hover *{
+    color: black;
+}
+.about-page-content h2{
+    margin-bottom: 10px;
+
+}
+.about-page-content .email{
+    text-align: left;
+    margin-top:10px;
+
+}
+.team-page-content{
+    top: 50%;
+    left: 10%;
+    width: 30%;
+    border: 1px solid #ffc822;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+.team-page-content:hover{
+    cursor:pointer;
+    background-color: #ffc822;
+    /* color: black; */
+}
+.team-page-content:hover *{
+    color: black;
+}
+.team-page-content h2{
+    margin-bottom: 10px;
+
+}
+.team-page-content ul{
+    list-style: none;
+    text-align: left;
+}
+.team-page-content ul li{
+    margin: 5px 0;
+}
+.team-page-content .icons{
+    text-align: left;
+    margin-top: 10px;
+    width: fit-content;
+}
+.team-page-content .icons img{
+    width: 48px;
+    height: 48px;
+    border-radius:6px;
+}
+.team-page-content .icons img:hover{
+    width: 50px;
+    height: 50px;
+}
+.icons-div{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+}
+.login-body{
+    background-image: url(./assets/login-2.png);
+    background-size: cover;
+    background-position: center;
+    color: black;
+    height: 100vh;
+    width:100vw;
+    overflow: hidden;
+}
+
+.login-body .header{
+    top:10%;
+    left: 5%;           
+    right: 5%;          
+    margin: 0 auto;     
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+.login-body .header p{
+    top:10%;
+    font-size: 25px;
+}
+/* .login-form{
+    position: absolute;
+    height: fit-content;
+    width: 400px;
+    top: 35%;
+    left:30%;
+    border: 3px solid rgba(255, 255, 255, 0.375);
+    padding: 15px;
+    font-size: 30px;
+    backdrop-filter: blur(3px);
+} */
+
+.login-form {
+  position: absolute;
+  width: 90%;         
+  max-width: 400px;   
+  top: 35%;
+  left: 5%;           
+  right: 5%;          
+  margin: 0 auto;     
+  box-sizing: border-box;
+  border: 3px solid rgba(255, 255, 255, 0.375);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 30px;
+  backdrop-filter: blur(3px);
+}
+
+.login-form input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #f8d673;
+    color:black;
+    font-size:large;
+}
+.login-form button{
+    position: relative;
+    width: 80%;
+    padding: 7px;
+    text-align: center;
+    align-items: center;
+    left: 10%;
+    margin-top: 40px;
+}
+
+
+@media(max-width:1024px){
+    .about-page-main{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    top:15%;
+}
+.about-page-content{
+    width: 80%;
+}
+    .people{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    top: 90%;
+}
+.team-page-content{
+    width: 85%;
+}
+.team{
+   top:85%;
+
+}
+.people{
+    top:95%;
+    margin-bottom: 20px;
+}
+.icons-div{
+    margin-top:15px;
+}
+}
 
 @media (max-width:850px){
 .header{
@@ -105,7 +324,14 @@ footer a{
     justify-content: center;
     gap: 30px;
 }
+.people{
+    top:110%;
 }
+.team{
+    top:95%;
+}
+}
+
 @media(max-width:620px){
     .btn{
     padding: 15px;
@@ -118,6 +344,7 @@ footer a{
     top:60%;
 }
 }
+
 @media(max-width:550px){
     .btn{
     padding: 15px;
@@ -133,4 +360,78 @@ footer a{
     top: 60%;
     gap:15px;
 }
+}
+
+@media(max-width: 523px){
+    .team{
+        top: 110%;
+    }
+    .people{
+        top: 125%;
+        padding-bottom: 20px;
+    }
+    .about-page-content{
+        width: 90%;
+    }
+    .team-page-content{
+        width: 90%;
+    }
+   #logo{
+    width:50px;
+    height:50px;
+
+}
+#logo img{
+    width: 75px;
+    height:75px;
+
+}
+.login-form{
+    width: 250px;
+    top: 35%;
+    font-size: 20px;
+
+}
+.login-form input{
+    padding: 5px;
+    font-size:small;
+
+    
+}
+.login-form button{
+   margin-top:20px;
+}
+
+.login-body .header{
+    font-size:medium;
+}
+.login-body .header p{
+    font-size:small;
+}
+
+}
+@media(max-width:336px){
+    .main{
+        top:60%;
+        margin-bottom: 10px;
+    }
+    .header{
+        top:10%;
+    }
+    .team-page-content h2{
+        font-size:20px ;
+    }
+    .team-page-content li{
+        font-size:15px ;
+    }
+.team-page-content .icons img{
+    width: 30px;
+    height: 30px;
+    border-radius:6px;
+}
+.team-page-content .icons img:hover{
+    width: 32px;
+    height: 32px;
+}
+
 }
