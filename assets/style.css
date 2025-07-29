@@ -210,7 +210,7 @@ footer a{
 }
 
 .login-body .header{
-    top:10%;
+    top:3%;
     left: 5%;
     right: 5%;
     margin: 0 auto;
@@ -219,7 +219,7 @@ footer a{
 }
 
 .login-body .header p{
-    top:10%;
+    margin-top:-22px;
     font-size: 25px;
 }
 /* .login-form{
@@ -274,7 +274,7 @@ footer a{
     position: absolute;
     width: 90%;         
     max-width: 400px;   
-    top: 30%;
+    top: 18%;
     left: 5%;           
     right: 5%;          
     margin: 0 auto;     
@@ -315,8 +315,8 @@ footer a{
     align-items: center;
     left: 10%;
     margin-top: 40px;
-
 }
+
 
 .food-data-body{
     background-color: black;
@@ -489,7 +489,7 @@ footer a{
     top:105%;
 }
 }
-@media(max-width: 767px){
+@media(max-width: 769px){
     .food-data-body main{
     flex-direction: column;
     align-items: center;
@@ -498,6 +498,9 @@ footer a{
   .food-data-body .food-divs{
     width: 80%;
 }
+    .login-body .header p{
+        margin-top: -37px;
+    }
 }
 
 @media(max-width:620px){
@@ -583,6 +586,9 @@ footer a{
 .food-data-body main{
     gap:20px;
 }
+    .login-body .header p{
+        margin-top: -14px;
+    }
 }
 @media(max-width:336px){
     .team{
