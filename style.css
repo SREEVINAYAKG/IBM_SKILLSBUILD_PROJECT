@@ -94,7 +94,8 @@ footer a{
 }
 .about-page-header{
     position: absolute;
-    width: 100%;
+    width: 80%;
+    left: 10%;
     text-align: center;   
     top:5%; 
 }
@@ -388,6 +389,7 @@ footer a{
     align-items: center;
     top:15%;
 }
+
 .about-page-content{
     width: 80%;
 }
@@ -403,11 +405,11 @@ footer a{
     width: 85%;
 }
 .team{
-   top:85%;
+   top:95%;
 
 }
 .people{
-    top:95%;
+    top:105%;
     margin-bottom: 20px;
 }
 .icons-div{
@@ -434,10 +436,10 @@ footer a{
     gap: 30px;
 }
 .people{
-    top:110%;
+    top:115%;
 }
 .team{
-    top:95%;
+    top:105%;
 }
 }
 @media(max-width: 767px){
@@ -483,10 +485,10 @@ footer a{
 
 @media(max-width: 523px){
     .team{
-        top: 110%;
+        top: 125%;
     }
     .people{
-        top: 125%;
+        top: 135%;
         padding-bottom: 20px;
     }
     .about-page-content{
@@ -536,6 +538,12 @@ footer a{
 }
 }
 @media(max-width:336px){
+    .team{
+        top:140%;
+    }
+    .people{
+        top:150%;
+    }
     .main{
         top:60%;
         margin-bottom: 10px;
