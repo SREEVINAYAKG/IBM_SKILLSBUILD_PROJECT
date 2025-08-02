@@ -19,4 +19,25 @@ app.get("/login",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.render("about");
 })
+app.get("/donor_login",(req,res)=>{
+    res.render("donor_login");
+})
+app.get("/donor_food_data",(req,res)=>{
+    res.render("donor_food_data");
+})
+app.get("/viewers_page",(req,res)=>{
+    res.render("viewers_page");
+})
+app.get("/signup",(req,res)=>{
+    res.render("signup");
+})
+app.post("/donor_login",(req,res)=>{
+    res.render("donor_food_data");
+})
+app.post("/signup",(req,res)=>{
+    res.render("donor_food_data");
+})
+app.post("/donor_form",async(req,res)=>{
+    res.render("donor_food_data");
+})
 app.listen(3000);
