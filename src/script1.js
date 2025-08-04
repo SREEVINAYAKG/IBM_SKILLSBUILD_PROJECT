@@ -10,7 +10,6 @@ app.set('views', path.join(__dirname, '..', 'views'));
 const pg = require('pg');
 
 
-
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
@@ -58,9 +57,15 @@ app.get("/donor_login",(req,res)=>{
 // app.get("/donor_dashboard",(req,res)=>{
 //     res.render("donor_food_data");
 // })
-app.get("/viewers_page",(req,res)=>{
-    res.render("viewers_page");
-})
+app.get("/viewers_page", async (req, res) => {
+      try {
+    const foodData = await db.query("SELECT * FROM food_items");
+    res.render("viewers_page", { foodItems: foodData.rows });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Internal Server Error");
+  }
+});
 app.get("/sign_up",(req,res)=>{
     res.render("signup");
 })
@@ -78,6 +83,12 @@ app.post("/donor_dashboard/:user_id", (req, res) => {
     const query = "INSERT INTO food_items (food_name, quantity, address, phone_num,id) VALUES ($1, $2, $3, $4,$5)";
     const values = [foodname, amount, address, phone_num, id];
     console.log("Received data:", { food_name: foodname, quantity: amount, address, phone_num, id });
+    const updateBtn = document.querySelector('.update-btn');
+    const deleteBtn = document.querySelector('.delete-btn');
+    const deleteFood = (id) => {
+        console.log("Delete button clicked");
+        // Implement delete functionality here
+    }
 
     db.query(query, values)
         .then(() => {

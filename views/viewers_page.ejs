@@ -16,31 +16,22 @@
         <h1>Available Food-Items</h1>
     </header>
     <main>
+        <% if (foodItems.length === 0) { %>
+            <div class="no-data">
+                <h2>No food items available at the moment.</h2>
+            </div>
+        <% } %>
+        <% for (let i = 0; i < foodItems.length; i++) { %>
         <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <a href="tel:+91013456">+91 1234567890</a>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
+            <h2><%= foodItems[i].food_name %></h2>
             <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
+                <li><%= foodItems[i].quantity %></li>
             </ul>
+            <a href="tel:+91<%= foodItems[i].phone_num %>">+91 <%= foodItems[i].phone_num %></a>
+            <p><%= foodItems[i].address %></p>
         </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-        </div>
-        <div class="div1 food-divs">
+        <%}%>
+        <!-- <div class="div1 food-divs">
             <h2>Name 1</h2>
             <p>+91 123456789</p>
             <p>Address1</p>
@@ -88,6 +79,18 @@
                 <li>food3-zunit</li>
             </ul>
         </div>
+        <div class="div1 food-divs">
+            <h2>Name 1</h2>
+            <p>+91 123456789</p>
+            <p>Address1</p>
+            <p>Address2</p>
+            <p>Address3</p>
+            <ul>
+                <li>food1-xunit</li>
+                <li>food2-yunit</li>
+                <li>food3-zunit</li>
+            </ul>
+        </div> -->
     </main>
 </body>
 </html>
