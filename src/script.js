@@ -6,3 +6,4 @@
 // findFood.addEventListener('click', () => {
 //     window.location.href = './food_data.ejs';
 // });
+

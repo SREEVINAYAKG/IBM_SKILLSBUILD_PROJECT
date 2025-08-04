@@ -49,6 +49,27 @@ app.get("/login",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.render("about");
 })
+app.get("/donor_login",(req,res)=>{
+    res.render("donor_login");
+})
+app.get("/donor_food_data",(req,res)=>{
+    res.render("donor_food_data");
+})
+app.get("/viewers_page",(req,res)=>{
+    res.render("viewers_page");
+})
+app.get("/signup",(req,res)=>{
+    res.render("signup");
+})
+app.post("/donor_login",(req,res)=>{
+    res.render("donor_food_data");
+})
+app.post("/signup",(req,res)=>{
+    res.render("donor_food_data");
+})
+app.post("/donor_form",async(req,res)=>{
+    res.render("donor_food_data");
+})
 app.get("/food_data",(req,res)=>{
     res.render("food_data");
 })
@@ -84,3 +105,4 @@ app.get("/donor_dashboard", (req, res) => {
 app.listen(3000,() => {
   console.log(`Server is running on http://localhost:3000`);
 });
+
