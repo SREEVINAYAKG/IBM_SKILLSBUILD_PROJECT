@@ -10,7 +10,7 @@
 </head>
 <body class="login-body">
     <div id="logo">
-        <a href="/"><img src="logo.png" alt="logo"></a>
+        <a href="/"><img src="/logo.png" alt="logo"></a>
     </div>
     <div class="header">
         <h1>Donor form</h1>
@@ -18,7 +18,7 @@
     </div>
     <div class="container">
         <div class="Donor-form">
-            <form action="/donor_dashboard" method="POST">
+            <form action="/donor_dashboard/<%= userId %>" method="POST">
                 <label for="foodname">Food Name:</label><br>
                 <input type="text" id="foodname" name="foodname" required>
                 <label for="amount">Quantity:</label><br>
