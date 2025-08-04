@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <script src="script1.js"></script>
+    <script src="/script1.js"></script>
 </head>
 <body class="food-data-body">
 
     <div id="logo">
-        <a href="/"><img src="logo.png" alt="logo"></a>
+        <a href="/"><img src="/logo.png" alt="logo"></a>
+    </div>
+    <div id="userName">
+       <h2> Welcome , <%= userName %> </h2>
     </div>
     <header>
         <h1>Available Food-Items</h1>
     </header>
     <main>
         <div class="add">
-            <a href="./donor_form"><img class="plus" src="plus.png" alt=""></a>
+            <a href='/donor_form/<%= userId %>'><img class="plus" src="plus.png" alt=""></a>
         </div>
-        
-        <% for (let i = 0; i < foodItems.length; i++) { %>
+    <% if (foodItems.length===0){%>
+        <div class="no-data">
+            <h2>No food items available at the moment.</h2>
+            <button onclick="location.href='/donor_form/<%= userId %>'" class="no-food-btn">Add Food Item</button>
+        </div>
+    <%}%>
+    <% for (let i = 0; i < foodItems.length; i++) { %>
         <div class="div1 food-divs">
             <h2><%= foodItems[i].food_name %></h2>
             <a href="tel:+91<%= foodItems[i].phone_num %>">+91 <%= foodItems[i].phone_num %></a>
@@ -31,77 +39,8 @@
         </div>
         <%}%>
 
+        <button onclick="location.href='/donor_form/<%= userId %>'" class="no-food-btn">Add Food Item</button>
 
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
     </main>
 </body>
 </html>

@@ -24,6 +24,13 @@ body{
     height:125px;
     cursor: pointer;
 }
+#userName{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: #ffc822;
+}
 h1{
     font-family: 'Lilita One', cursive;
 }
@@ -273,6 +280,7 @@ footer a{
     margin-top: 40px;
 
 }
+
 .donor-body{
     background-image: url(donor.jpeg);
     background-size: cover;
@@ -296,6 +304,7 @@ footer a{
     top:10%;
     font-size: 25px;
 }
+
 
 .login-form .register {
     display: flex;
@@ -410,22 +419,53 @@ footer a{
   box-shadow: 0 8px 20px rgba(255, 200, 34, 0.5);
 }
 
-.food-data-body button{
+/* .food-data-body button{
     padding: 5px;
     border-radius: 5px;
     margin-top: 15px;
     margin-right: 15px;
     font-size: small;
     font-weight: bold;
+} */
+.no-data{
+    /* position: absolute;
+    top: 10%;
+    left: 10%; */
+    margin: auto;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+}
+.no-food-btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffc822;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
 }
 .food-data-body button:hover{
     cursor: pointer;
 
 }
 .food-data-body .delete-btn{
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
+    font-size: small;
+    font-weight: bold;
     background-color: rgb(252, 96, 96);
 }
 .food-data-body .update-btn{
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-right: 15px;
+    font-size: small;
+    font-weight: bold;
     background-color: rgb(21, 246, 21);
 }
 .food-data-body .delete-btn:hover{
@@ -677,5 +717,7 @@ footer a{
     width: 32px;
     height: 32px;
 }
-
+#userName{
+    font-size: 15px;
+}
 }
