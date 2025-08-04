@@ -20,6 +20,9 @@
         <h1>Available Food-Items</h1>
     </header>
     <main>
+        <div class="add">
+            <a href='/donor_form/<%= userId %>'><img class="plus" src="plus.png" alt=""></a>
+        </div>
     <% if (foodItems.length===0){%>
         <div class="no-data">
             <h2>No food items available at the moment.</h2>
@@ -35,77 +38,9 @@
             <button class="delete-btn">Delete</button>
         </div>
         <%}%>
+
         <button onclick="location.href='/donor_form/<%= userId %>'" class="no-food-btn">Add Food Item</button>
-        <!-- <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div>
-        <div class="div1 food-divs">
-            <h2>Name 1</h2>
-            <p>+91 123456789</p>
-            <p>Address1</p>
-            <p>Address2</p>
-            <p>Address3</p>
-            <ul>
-                <li>food1-xunit</li>
-                <li>food2-yunit</li>
-                <li>food3-zunit</li>
-            </ul>
-              <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
-        </div> -->
+
     </main>
 </body>
 </html>

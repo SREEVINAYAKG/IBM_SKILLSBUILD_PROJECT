@@ -419,8 +419,6 @@ footer a{
   box-shadow: 0 8px 20px rgba(255, 200, 34, 0.5);
 }
 
-
-
 /* .food-data-body button{
     padding: 5px;
     border-radius: 5px;
@@ -502,6 +500,29 @@ footer a{
   font-size: 2rem;
   text-decoration: none;
   color: #ffffff;
+}
+.add{
+    background-color: #ffe6b3;  /* soft creamy orange */
+    box-shadow: 0 4px 12px rgba(255, 174, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+    width: 20%;
+    min-height: fit-content;
+    max-height: 300px;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: black;
+    margin-bottom:3% ;
+    align-content: center;
+}
+.add a{
+    margin : 100px
+}
+.add:hover{
+    transform: translateY(-5px);
+    background-color: #ffc822;
+    box-shadow: 0 8px 20px rgba(255, 200, 34, 0.5);
 }
 
 @media(max-width:1024px){
