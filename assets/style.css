@@ -94,7 +94,8 @@ footer a{
 }
 .about-page-header{
     position: absolute;
-    width: 100%;
+    width: 80%;
+    left: 10%;
     text-align: center;   
     top:5%; 
 }
@@ -209,7 +210,7 @@ footer a{
 }
 
 .login-body .header{
-    top:10%;
+    top:3%;
     left: 5%;
     right: 5%;
     margin: 0 auto;
@@ -218,7 +219,7 @@ footer a{
 }
 
 .login-body .header p{
-    top:10%;
+    margin-top:-22px;
     font-size: 25px;
 }
 /* .login-form{
@@ -310,7 +311,7 @@ footer a{
     position: absolute;
     width: 90%;         
     max-width: 400px;   
-    top: 30%;
+    top: 18%;
     left: 5%;           
     right: 5%;          
     margin: 0 auto;     
@@ -351,8 +352,8 @@ footer a{
     align-items: center;
     left: 10%;
     margin-top: 40px;
-
 }
+
 
 .food-data-body{
     background-color: black;
@@ -472,6 +473,7 @@ footer a{
     align-items: center;
     top:15%;
 }
+
 .about-page-content{
     width: 80%;
 }
@@ -487,11 +489,11 @@ footer a{
     width: 85%;
 }
 .team{
-   top:85%;
+   top:95%;
 
 }
 .people{
-    top:95%;
+    top:105%;
     margin-bottom: 20px;
 }
 .icons-div{
@@ -518,13 +520,13 @@ footer a{
     gap: 30px;
 }
 .people{
-    top:110%;
+    top:115%;
 }
 .team{
-    top:95%;
+    top:105%;
 }
 }
-@media(max-width: 767px){
+@media(max-width: 769px){
     .food-data-body main{
     flex-direction: column;
     align-items: center;
@@ -533,6 +535,9 @@ footer a{
   .food-data-body .food-divs{
     width: 80%;
 }
+    .login-body .header p{
+        margin-top: -37px;
+    }
 }
 
 @media(max-width:620px){
@@ -567,10 +572,10 @@ footer a{
 
 @media(max-width: 523px){
     .team{
-        top: 110%;
+        top: 125%;
     }
     .people{
-        top: 125%;
+        top: 135%;
         padding-bottom: 20px;
     }
     .about-page-content{
@@ -618,8 +623,17 @@ footer a{
 .food-data-body main{
     gap:20px;
 }
+    .login-body .header p{
+        margin-top: -14px;
+    }
 }
 @media(max-width:336px){
+    .team{
+        top:140%;
+    }
+    .people{
+        top:150%;
+    }
     .main{
         top:60%;
         margin-bottom: 10px;
