@@ -36,7 +36,6 @@ db.connect()
             console.error("Error retrieving food items:", err);
         });
 
-
 app.get("/",(req,res)=>{
     res.render("index");
 })
@@ -101,6 +100,7 @@ app.get("/donor_dashboard", (req, res) => {
             console.error("Error retrieving food data:", err);
             res.status(500).send("Internal Server Error");
         });
+        res.render("donor_food_data");
 });
 app.listen(3000,() => {
   console.log(`Server is running on http://localhost:3000`);

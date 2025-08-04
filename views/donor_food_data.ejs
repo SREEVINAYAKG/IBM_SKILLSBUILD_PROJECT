@@ -17,7 +17,11 @@
         <h1>Available Food-Items</h1>
     </header>
     <main>
-    <% for (let i = 0; i < foodItems.length; i++) { %>
+        <div class="add">
+            <a href="./donor_form"><img class="plus" src="plus.png" alt=""></a>
+        </div>
+        
+        <% for (let i = 0; i < foodItems.length; i++) { %>
         <div class="div1 food-divs">
             <h2><%= foodItems[i].food_name %></h2>
             <a href="tel:+91<%= foodItems[i].phone_num %>">+91 <%= foodItems[i].phone_num %></a>
@@ -26,6 +30,8 @@
             <button class="delete-btn">Delete</button>
         </div>
         <%}%>
+
+
         <div class="div1 food-divs">
             <h2>Name 1</h2>
             <p>+91 123456789</p>
