@@ -1,7 +1,15 @@
 {
   "dependencies": {
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "pg": "^8.16.3"
+  },
+  "scripts": {
+    "start": "node src/script1.js",
+    "dev": "nodemon src/script1.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

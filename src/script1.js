@@ -1,5 +1,7 @@
+// require('dotenv').config(); 
 const express= require('express');
 const path=require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const app = express();
 app.set('view engine','ejs');
 app.use(express.json());
@@ -9,15 +11,15 @@ app.use(express.static(path.join(__dirname, '..', 'assets')));
 app.set('views', path.join(__dirname, '..', 'views'));
 const pg = require('pg');
 
-
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "ibm_skillsbuild_proj_db",
-    password:"Vinayak@1234",
-    port: 5433,
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: process.env.PGPORT,
+    ssl: process.env.SSL === 'true' ? { rejectUnauthorized: false } : false,
 })
-
+console.log("PGPASSWORD:", typeof process.env.PGPASSWORD, process.env.PGPASSWORD);
 db.connect()
     .then(() => {
         console.log("Connected to the database");
@@ -83,12 +85,6 @@ app.post("/donor_dashboard/:user_id", (req, res) => {
     const query = "INSERT INTO food_items (food_name, quantity, address, phone_num,id) VALUES ($1, $2, $3, $4,$5)";
     const values = [foodname, amount, address, phone_num, id];
     console.log("Received data:", { food_name: foodname, quantity: amount, address, phone_num, id });
-    const updateBtn = document.querySelector('.update-btn');
-    const deleteBtn = document.querySelector('.delete-btn');
-    const deleteFood = (id) => {
-        console.log("Delete button clicked");
-        // Implement delete functionality here
-    }
 
     db.query(query, values)
         .then(() => {
