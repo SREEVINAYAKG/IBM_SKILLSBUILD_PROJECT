@@ -147,7 +147,7 @@ app.post("/sign_up",(req,res)=>{
             console.error("Error registering user:", err);
             res.status(500).send("Internal Server Error");
         });
-        res.render("donor_food_data");
+        // res.render("donor_food_data");
 });
 app.post("/donor_login",(req,res)=>{
     const { username, password } = req.body;
