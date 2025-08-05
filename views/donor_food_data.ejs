@@ -34,13 +34,13 @@
             </ul>
             <a href="tel:+91<%= foodItems[i].phone_num %>">+91 <%= foodItems[i].phone_num %></a>
             <p><%= foodItems[i].address %></p>
-            <button class="update-btn">Update</button>
-            <button class="delete-btn">Delete</button>
+            <button onclick="window.alert('Update functionality not implemented yet.')"  class="update-btn">Update</button>
+            <button onclick="window.alert('Delete functionality not implemented yet.')" class="delete-btn">Delete</button>
         </div>
     <%}%>
         <div class="add">
             <!-- <a href='/donor_form/<%= userId %>'><img class="plus" src="/plus.png" alt=""></a> -->
-            <a href='/donor_form/<%= userId %>'>+</a>
+            <a href='/donor_form/<%= userId %>'><img class="plus" src="/plus.png" alt=""></a>
         </div>
     <%}%>
     </main>
